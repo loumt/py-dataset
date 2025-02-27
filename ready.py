@@ -12,7 +12,7 @@ def start(opt):
     #初始化字符集
     init_charset(opt)
 
-def parseArgs():
+def parse_args():
     parser = argparse.ArgumentParser(description="Ready.")
     parser.add_argument('--dataset', type=str, default='D:/DataSet/Train/images', help='数据集文件夹')
     parser.add_argument('--label', type=str, default='D:/DataSet/Train/labels.txt', help='数据标签集合')
@@ -24,5 +24,5 @@ def parseArgs():
 
 
 if __name__ == "__main__":
-    opt = parseArgs();
+    opt = parse_args();
     start(opt)

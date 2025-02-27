@@ -10,6 +10,10 @@ valName = 'val'
 testName = 'test'
 
 def valid(name):
+    if not os.path.exists(f'{parentImageDir}/{name}'):
+        log(f'\t[ERROR] Not Exist => {parentImageDir}/{name}')
+        quit()
+
     _set = set(os.listdir(f'{parentImageDir}/{name}'))
     log(f'\t[INFO] {name}: {len(_set)}个')
 

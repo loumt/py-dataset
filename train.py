@@ -20,12 +20,12 @@ def start(opt):
     for epoch in range(1, opt.epochs + 1):
         print(epoch)
 
-def parseArgs():
+def parse_args():
     parser = argparse.ArgumentParser(description="Training.")
     parser.add_argument('--epochs', type=int, default=1, help='训练批次')
     parser.add_argument('--batch-size', type=int, default=20, help='批次大小')
     return parser.parse_args();
 
 if __name__ == "__main__":
-    opt = parseArgs();
+    opt = parse_args();
     start(opt)
